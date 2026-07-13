@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartParking</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.m
+in.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-dark text-white fs-4">
+        SmartParking Admin
+      </nav>
+    </header>
+
+    <div class="container-fluid p-0 m-0">
+      <div class="d-flex flex-row">
+        <!-- Side bar -->
+        <div class="column">
+          <nav class="p-2">
+            <ul class="nav flex-column">
+              <li>
+                <button class="nav-item w-100" aria-label="Overview">
+                  Overview
+                </button>
+              </li>
+              <li>
+                <button class="nav-item w-100" aria-label="CCTV">CCTV</button>
+              </li>
+              <li>
+                <button class="nav-item w-100" aria-label="Pricing">
+                  Pricing
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Main page content -->
+        <div class="d-flex flex-column flex-grow-1">
+          <main
+            class="d-flex flex-column flex-grow-1 p-3"
+            id="main"
+            style="background-color: rgb(235, 240, 240)"
+          >
+            <h1 class="pb-2">Garage A - Status</h1>
+
+            <!-- Card row -->
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div
+                  class="card border-0 border-start border-success border-4 p-3"
+                >
+                  <small class="text-muted text-uppercase fw-bold text-xs"
+                    >Daily revenue</small
+                  >
+                  <h2 class="mb-0 info-card-value">$450</h2>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div
+                  class="card border-0 border-start border-primary border-4 p-3"
+                >
+                  <small class="text-muted text-uppercase fw-bold text-xs"
+                    >Occupancy</small
+                  >
+                  <h2 class="mb-0 info-card-value">87%</h2>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div
+                  class="card border-0 border-start border-danger border-4 p-3"
+                >
+                  <small class="text-muted text-uppercase fw-bold text-xs"
+                    >Reported errors</small
+                  >
+                  <h2 class="mb-0 info-card-value">1 st</h2>
+                  <button type="button" class="btn btn-danger">
+                    Action required
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Garage inventory table -->
+            <h2>Current activities</h2>
+
+            <div class="card p-3">
+              <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Reg-nr</th>
+                        <th>Arrival</th>
+                        <th>Lot nr</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ABC-123</td>
+                        <td>16:32</td>
+                        <td>23</td>
+                        <td><div class="badge bg-success">Actve</div></td>
+                    </tr>
+                    <tr>
+                        <td>OKU-819</td>
+                        <td>16:08</td>
+                        <td>11</td>
+                        <td><div class="badge bg-success">Actve</div></td>
+                    </tr>
+                    <tr>
+                        <td>SWS-554</td>
+                        <td>15:45</td>
+                        <td>19</td>
+                        <td><div class="badge bg-success">Actve</div></td>
+                    </tr>
+                    <tr>
+                        <td>GKN-839</td>
+                        <td>15:36</td>
+                        <td>23</td>
+                        <td><div class="badge bg-secondary">Ended</div></td>
+                    </tr>
+                    <tr>
+                        <td>LSH-022</td>
+                        <td>15:21</td>
+                        <td>77</td>
+                        <td><div class="badge bg-secondary">Ended</div></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
