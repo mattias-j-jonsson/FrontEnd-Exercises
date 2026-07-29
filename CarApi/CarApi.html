@@ -193,19 +193,26 @@
             if (isNaN(year)) {
                 throw new Error(`Året ska anges med siffror.`);
             }
-            console.log(`Brand: ${brand}`);
-            console.log(`Model: ${model}`);
-            console.log(`Year: ${year}`);
-            console.log(`color: ${color}`);
-            
+            // console.log(`Brand: ${brand}`);
+            // console.log(`Model: ${model}`);
+            // console.log(`Year: ${year}`);
+            // console.log(`color: ${color}`);
+            const newCar = {}
     
-            // const response = await fetch();
+            const response = await fetch(API_URL,
+              {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({brand, model, year, color})
+              }
+            );
     
-            // if (!response.ok){
-            //     throw new Error("Fel när ny bil skulle skapas: ${response.status}");
-            // }
+            if (!response.ok){
+                throw new Error("Fel när ny bil skulle skapas: ${response.status}");
+            }
     
     
+            // carForm.elements.clear;
             // anrop fetchCars för att rita ut listan på nytt
             fetchCars;
             
