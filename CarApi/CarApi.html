@@ -197,7 +197,6 @@
             // console.log(`Model: ${model}`);
             // console.log(`Year: ${year}`);
             // console.log(`color: ${color}`);
-            const newCar = {}
     
             const response = await fetch(API_URL,
               {
@@ -214,7 +213,7 @@
     
             // carForm.elements.clear;
             // anrop fetchCars för att rita ut listan på nytt
-            fetchCars;
+            await fetchCars();
             
         } catch (error) {
             console.error("Fel:", error);
@@ -223,6 +222,24 @@
       };
 
       submitBtn.addEventListener('click', createCar);
+
+
+      // ==========================================
+      // Delete (DELETE) - Ta bort en bil
+      // ==========================================
+      const deleteCar = async (id) => {
+        try{
+          const response = await fetch(`${API_URL}/${id}`, {method: 'DELETE'});
+
+          if (!response.ok){
+            throw new Error("Fel när bil skulle raderas: ${response.status}");
+          }
+
+          await fetchCars();
+        } catch (error) {
+            console.error("Fel:", error);
+        }
+      }
     </script>
   </body>
 </html>
