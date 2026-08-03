@@ -177,7 +177,7 @@
 
       // Event listener för ladda-knappen
       loadBtn.addEventListener("click", fetchCars);
-
+      // carForm.addEventListener("submit", createCar);
       // ==========================================
       // CREATE (POST) - Skapa ny bil
       // ==========================================
@@ -205,11 +205,11 @@
                 body: JSON.stringify({brand, model, year, color})
               }
             );
+            carForm.reset();
     
             if (!response.ok){
                 throw new Error("Fel när ny bil skulle skapas: ${response.status}");
             }
-    
     
             // carForm.elements.clear;
             // anrop fetchCars för att rita ut listan på nytt
@@ -221,7 +221,7 @@
 
       };
 
-      submitBtn.addEventListener('click', createCar);
+      carForm.addEventListener('submit', createCar);
 
 
       // ==========================================
